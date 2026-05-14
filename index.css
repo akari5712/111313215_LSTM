@@ -1,0 +1,11 @@
+.first-list{
+    li{
+        font-size: 125%;
+        /* background-color: aqua; */
+    }
+}
+.one{
+    ul{
+        font-size: 125%;
+    }
+}
