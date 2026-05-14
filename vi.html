@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { background: #f0f2f5; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; overflow: hidden; }
+        .conveyor { width: 800px; height: 10px; background: #333; position: relative; margin-top: 100px; }
+        .cell-state { width: 40px; height: 40px; background: #ffcc00; border-radius: 50%; position: absolute; top: -15px; left: -50px; box-shadow: 0 0 15px rgba(255,204,0,0.8); transition: all 1s linear; }
+        .gate { position: absolute; top: -80px; text-align: center; font-weight: bold; font-size: 14px; }
+        .gate span { display: block; padding: 5px; border-radius: 5px; color: white; }
+        .forget { left: 200px; } .forget span { background: #ff4d4d; }
+        .input { left: 400px; } .input span { background: #4caf50; }
+        .output { left: 600px; } .output span { background: #2196f3; }
+        .msg { margin-top: 50px; font-style: italic; color: #666; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 8px; border: none; background: #333; color: white; }
+    </style>
+</head>
+<body>
+
+    <h2>LSTM 視覺化傳送帶 (依據你的草圖製作)</h2>
+    <button onclick="startFlow()">執行一次(處理目前數據)</button>
+
+    <div class="conveyor">
+        <!-- 三個閘門站 -->
+        <div class="gate forget"><span>Forget Gate<br>「斷捨離」</span><div id="f-arrow">↓</div></div>
+        <div class="gate input"><span>Input Gate<br>「記重點」</span><div id="i-arrow">↓</div></div>
+        <div class="gate output"><span>Output Gate<br>「交作業」</span><div id="o-arrow">↓</div></div>
+        
+        <!-- 你的 History 線上的資訊金球 -->
+        <div id="ball" class="cell-state"></div>
+    </div>
+
+    <div id="status" class="msg">準備就緒，點擊按鈕觀察 History 線的變化...</div>
+
+    <script>
+        function startFlow() {
+            const ball = document.getElementById('ball');
+            const status = document.getElementById('status');
+            
+            // 重置
+            ball.style.left = '-50px';
+            ball.style.transform = 'scale(1)';
+            ball.style.opacity = '1';
+
+            setTimeout(() => {
+                // 1. 移動到 Forget Gate
+                ball.style.left = '200px';
+                status.innerText = "Step 1: Forget Gate - 判斷哪些舊資訊該丟掉...";
+            }, 500);
+
+            setTimeout(() => {
+                // 模擬忘記：球變小一點
+                ball.style.transform = 'scale(0.7)';
+            }, 1500);
+
+            setTimeout(() => {
+                // 2. 移動到 Input Gate
+                ball.style.left = '400px';
+                status.innerText = "Step 2: Input Gate - 將當前有用的新資訊存入 History...";
+            }, 2500);
+
+            setTimeout(() => {
+                // 模擬存入：球變大且發光
+                ball.style.transform = 'scale(1.3)';
+                ball.style.boxShadow = '0 0 30px rgba(255,204,0,1)';
+            }, 3500);
+
+            setTimeout(() => {
+                // 3. 移動到 Output Gate
+                ball.style.left = '600px';
+                status.innerText = "Step 3: Output Gate - 結合記憶與現況，產出結果 (Output)...";
+            }, 4500);
+
+            setTimeout(() => {
+                // 4. 流向下一站
+                ball.style.left = '850px';
+                status.innerText = "處理完成！更新後的 History 繼續傳遞給下一站。";
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
