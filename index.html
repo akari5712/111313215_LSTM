@@ -14,18 +14,20 @@
     <section>
         <div class="first-list">
             <h2>目錄</h2>
-            <ol class="">
-                <li>演算法介紹</li>
-                <li>AI輔助學習與紀錄</li>
-                <li>查證與修正</li>
-                <li>視覺化說明</li>
-                <li>應用案例</li>
-                <li>學習反思</li>
+            <hr>
+            <ol >
+                <li><a href="#section-1">演算法介紹</a></li>
+                <li><a href="#section-2">AI輔助學習與紀錄</a></li>
+                <li><a href="#section-3">查證與修正</a></li>
+                <li><a href="#section-4">視覺化說明</a></li>
+                <li><a href="#section-5">應用案例</a></li>
+                <li><a href="#section-6">學習反思</a></li>
             </ol>
         </div>
-        <hr></hr>
-        <div class="one">
-            <h2>演算法介紹</h2>
+        
+        <div id="section-1" class="one">
+            <h2>1.演算法介紹</h2>
+            <hr>
             <h3>LSTM（長短期記憶神經網路，Long Short-Term Memory）</h3>
             <div class="intro_1">
                 <h4>介紹</h4>
@@ -63,31 +65,103 @@
                 </ol>
             </div>  
         </div>
-        <div class="two">
+        <div id="section-2" class="one">
+            <h2>2.AI輔助學習與紀錄</h2>
+            <hr>
             <h3>對話內容</h3>
-            <img src="螢幕擷取畫面 2026-05-23 011020.png" alt="1">
-            <img src="螢幕擷取畫面 2026-05-23 011456.png" alt="2">
-            <img src="螢幕擷取畫面 2026-05-23 011517.png" alt="3">
-            <img src="螢幕擷取畫面 2026-05-23 214248.png" alt="其他應用">
-            <img src="螢幕擷取畫面 2026-05-23 214320.png" alt="不考慮時間因素">
-            <img src="螢幕擷取畫面 2026-05-23 214458.png" alt="不考慮硬體">
-            <img src="螢幕擷取畫面 2026-05-23 214534.png" alt="全部考慮">
-            <img src="螢幕擷取畫面 2026-05-23 214554.png" alt="為什麼不全換成transfarmer?">
-            <img src="螢幕擷取畫面 2026-05-23 222648.png" alt="股票變化推測問什麼是用LSTM?">
-            <div></div>
+            <div class="two_1">
+                <h4>1.是以什麼作為標準判斷是否需要遺忘?</h4>
+                <img src="螢幕擷取畫面 2026-05-23 011456.png" width=500px alt="是以什麼作為標準判斷是否需要遺忘?">
+                <img src="螢幕擷取畫面 2026-05-23 011517.png" width=500px alt="2">
+            </div>
+            <div class="two_2">
+                <h4>2.除了股票預測,還有什麼場合會使用LSTM?</h4>
+                <img src="螢幕擷取畫面 2026-05-24 031706.png" width=500px alt=".除了股票預測,還有什麼場合會使用LSTM">
+            </div>
+            <div class="two_3">
+                <h4>與Transformer的比較</h4>
+                <img src="螢幕擷取畫面 2026-05-23 214320.png" width=500px alt="不考慮時間因素">
+                <img src="螢幕擷取畫面 2026-05-23 214458.png" width=500px alt="不考慮硬體">
+                <img src="螢幕擷取畫面 2026-05-23 214534.png" width=500px alt="全部考慮">
+                <img src="螢幕擷取畫面 2026-05-23 214554.png" width=500px alt="為什麼不全換成transformer?">
+            </div>
+            
+
+            
+            <div class="two_4">
+                <h4>為什麼股票預測要使用LSTM?</h4>
+                <img src="螢幕擷取畫面 2026-05-23 222648.png" width=500px alt="股票變化推測問什麼是用LSTM?">
+            </div>
+            <div class="two_5">
+                <h4>AI 回答的重點</h4>
+                <ol>
+                    <li>LSTM 判斷資訊要遺忘或保留，並非靠寫死的規則，而是靠數學權重與當前上下文動態決策</li>
+                    <li>與Transformer相比,LSTM會適度地遺忘,但是速度較快,適合處理即時、連續、只看近期趨勢的任務</li>
+                    <li>因為LSTM運作需要較少電量、記憶體容量固定不中斷、泛化能力較佳、自動擦掉過時記憶專注於近期慣性與速度快等因素,工業與金融業目前仍會使用LSTM而不是Transformer</li>
+                </ol>
+            </div>
+            <div class="two_6">
+                <h4>如何幫助自己了解</h4>
+                <p>讓我明白模型不是越新越好,每個模型都有適合的場合,有些場合適合運用較上層的Transformer,但是在晶片等場合適合使用LSTM。</p>
+                <p>準確度不是唯一考量,在實際應用上也需要考量算力成本、硬體功耗、回應速度（延遲）以及記憶體限制來做抉擇</p>
+            </div>
         </div>
-        <div class="four">
-            <h2>視覺化互動</h2>
+        <div id="section-3" class="one">
+            <h2>3.查證與修正</h2>
+            <hr>
+            <h3>針對重點:與Transformer相比,LSTM會適度地遺忘,但是速度較快,適合處理即時、連續、只看近期趨勢的任務</h3>
+            <h3>查證過程:使用google搜尋以及使用Gemini輔助</h3>
+                <ol>
+                    <li>google搜尋關鍵字:Transformer LSTM 比較</li>
+                    <li>查閱相關搜尋結果</li>
+                    <li>詢問Gemini並要求提供資料來源</li>
+                    <li>確認Gemini資料來源正確性</li>
+                </ol>
+                <p>經過查證「LSTM會適度地遺忘」這點是正確的,LSTM有一道「遺忘閘」，LSTM會透過它遺忘不需要的資料。<br>
+                    「適合處理處理即時、連續、只看近期趨勢的任務」正確，許多文獻指出Transformer更擅長long-range dependency，LSTM較適合短序列、即時串流與低延遲場景。<br>
+                    但是在「LSTM速度較快」這點具有瑕疵,必須將訓練階段及推理階段分開討論。<br>
+                    在訓練階段時，Transformer因為可以「並行化（Parallelization）」處理整個序列，訓練速度遠快於必須一字一步處理的LSTM。<br>
+                    <!-- 在推理階段中，LSTM處理新進資料的時間複雜度是O(1)，因為它只需要把新資料丟進固定的隱藏狀態中；而Transformer則需要跟過去所有歷史資料重新計算自注意力，複雜度是O(N)到 $O(N^2)$。所以在即時、逐點進來的資料串流中，LSTM 的反應速度（低延遲）和省記憶體程度遠超 Transformer。<br> -->
+                    在推理階段中，文獻中指出LSTM的部署與維護不論在硬體需求還是成本上都極具經濟效益；而Transformer的部署則會因為極度依賴雲端GPU集群與巨大的存儲空間，產生高昂的初期與運維成本。
+                </p>
+                
+            <h3>修正後結論:<br>LSTM 透過 forget gate 會逐漸遺忘較久以前的資訊，因此更偏向關注近期趨勢。<br>相較於 Transformer，LSTM 雖然不擅長超長距離依賴與大規模平行訓練，但在即時推論、串流資料、低延遲與資源受限的情境中，仍常比 Transformer 更輕量且有效率。</h3>
+            <h3>修正我原本以為在經過多次執行後,LSTM會比Transformer還快,但是經過查證後,發現在訓練階段時,Transformer因為可以平行處理,速度會比LSTM快。
+                在推理階段雖然沒有文獻具體指出LSTM與Transformer的速度差異,但是許多文獻中都有提及Transformer需要極度依賴雲端GPU集群與巨大的存儲空間，產生高昂的初期與運維成本。LSTM則是不需要大量的硬體資源。因此在實際應用中，它非常適合部署在智慧電表或邊緣設備等低資源環境，進行低延遲的即時（Real-time）推理。
+            </h3>
+            <h3>參考資料</h3>
+            <ol id="three-1">
+                <ul><a href="https://ithelp.ithome.com.tw/m/articles/10361025#:~:text=%E4%B9%9D%E3%80%81%E6%AF%94%E8%BC%83%20Transformer%20%E8%88%87%20LSTM%20%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%80%A7%E8%83%BD" target="_blank">Day16：時間序列預測--Transformer</a></ul>
+                <ul><a href="https://www.preprints.org/manuscript/202603.0624" target="_blank">LSTM vs. Transformer Models in Power Forecasting: A Comprehensive Survey.</a></ul>
+                <ul><a href="https://www.developersdigest.tech/blog/kv-caching-transformer-inference-guide" target="_blank">KV Caching: A Practical Guide to Optimizing Transformer Inference</a></ul>
+                <ul><a href="https://medium.com/@uzbrainai/mamba-vs-transformer-the-real-shift-in-ai-architecture-2026-bf758ba278ec" target="_blank">Mamba vs Transformer: The Real Shift in AI Architecture (2026)</a></ul>
+                <ul><a href="https://www.sabrepc.com/blog/deep-learning-and-ai/rnns-vs-lstm-vs-transformers" target="_blank">RNNs vs LSTM vs Transformers - How AI Language Processing Evolved</a></ul>
+                <ul><a href="https://www.ibm.com/think/topics/lstm?utm_source=chatgpt.com" target="_blank">What is long short-term memory (LSTM)?</a></ul>
+            </ol>
+        </div>
+        <div id="section-4" class="one">
+            <h2>4.視覺化互動</h2>
+            <hr>
             <iframe src=vi.html width=800 height=600 frameborder="0"></iframe>
+            <img src="1_hhhrRqR9V6aGOcmmm4ZlUw.png" width=800>
+            <img src="lstm-architecture.png" width=50% alt="流程圖">
+        </div>
+        <div id="section-5" class="one">
+            <h2>5.應用案例:股票預測</h2>
+            <hr>
 
         </div>
-        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+        <div id="section-6" class="one">
+            <h2>6.學習反思</h2>
+            <hr>
+        </div>
+        <!-- <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
             <df-messenger
             intent="WELCOME"
             chat-title="餐廳"
             agent-id="e2bb7465-0854-4af0-b980-2ffc9cd9c0b8"
             language-code="zh-tw"
-            ></df-messenger>
+            ></df-messenger> -->
     </section>
     
 </body>
