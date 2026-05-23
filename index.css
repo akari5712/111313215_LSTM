@@ -1,35 +1,47 @@
-* {  
-    border: 0; 
-    margin: 0; 
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: "LXGW WenKai TC", sans-serif !important;
 }
-html {
-    padding: 0; 
-    margin: 0; 
-    color: #ffffff; 
-    background-color: rgb(107, 110, 141); 
+
+html, body {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    background-color: rgb(107, 110, 141);
 }
 
 header {
-    padding: 0px; 
-    display: flex; 
-    box-sizing: border-box; 
-    justify-content: center; 
-    align-items: center; 
-    background-image: url(Gemini_Generated_Image_qpt6rxqpt6rxqpt6.png); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    height: 300px; 
-    width: 100%; 
-    color: #ffffff; 
-    font-size: 75px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(Gemini_Generated_Image_qpt6rxqpt6rxqpt6.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+    color: #ffffff;
+    font-size: 75px;
 }
 
 section {
-    margin-top: 30px; 
-    margin-left: 30px; 
-    margin-right: 30px; 
-    background-color: rgb(107, 110, 141); 
+    padding: 30px;
+    background-color: rgb(107, 110, 141);
+}
+
+/* 修正分隔線，不讓它變成大黑塊 */
+hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 20px 0;
+}
+
+/* 確保圖片能正常顯示大小 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
 }
