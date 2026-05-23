@@ -8,25 +8,26 @@
 html, body {
     margin: 0;
     padding: 0;
-    color: #ffffff;
+    /* color: #ffffff; */
     background-color: rgb(107, 110, 141);
 }
 
 header {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     background-image: url(Gemini_Generated_Image_qpt6rxqpt6rxqpt6.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 300px;
+    height: 100px;
     width: 100%;
     color: #ffffff;
-    font-size: 75px;
+    font-size: 50px;
 }
 
 section {
+    margin:0px 10px 10px 0px ;
     padding: 30px;
     background-color: rgb(107, 110, 141);
 }
@@ -44,4 +45,29 @@ img {
     height: auto;
     display: block;
     margin-bottom: 15px;
+}
+ol{
+    margin-left: 25px;
+}
+hr{
+    display: block;          /* 確保它是區塊元素 */
+    height: 1px;             /* 設定線條粗細 */
+    border: none;            /* 清除預設的立體邊框 */
+    background-color: #ccc;  /* 設定線條顏色（灰色） */
+    margin: 20px 0;          /* 設定上下間距，讓畫面有呼吸感 */
+    opacity: 1;
+}
+.first-list{
+    margin: 30px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 10px 5px 2px 1px rgb(0 0 0 / 20%);
+}
+.one{
+    margin: 30px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 10px 5px 2px 1px rgb(0 0 0 / 20%);
 }
