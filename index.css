@@ -1,12 +1,10 @@
 *{  border: 0;
     margin: 0;
-    background-color: rgb(107, 110, 141);
 }
 html{
     font-family: "LXGW WenKai TC", cursive;
     margin: 30px;
     padding: 0;
-    background-color: rgb(251, 255, 255);
     display: flexbox;
     border: 0px;
     color: #ffffff;
@@ -14,7 +12,6 @@ html{
 }
 header{
     padding: 0px;
-    margin: 0px;
     display: flex;
     box-sizing: border-box;
     justify-content: center;
