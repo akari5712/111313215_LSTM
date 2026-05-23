@@ -106,19 +106,11 @@ function startFlow() {
     const ball = document.getElementById('ball');
     const status = document.getElementById('status');
     
-    // 【核心修正】瞬間跳回最左邊起點：先拔掉動畫，定格到 0px
-    ball.style.transition = 'none'; 
-    ball.style.left = '0px';
-    ball.style.transform = 'translateX(-50%) scale(1)';
+    // 確保動畫開關是打開的，正常出發
+    ball.style.transition = 'all 1s linear';
     ball.style.opacity = '1';
     ball.style.boxShadow = '0 0 15px rgba(255,204,0,0.8)';
     
-    // 強制瀏覽器重繪（Reflow），確保「無動畫跳回」立刻生效
-    ball.offsetHeight; 
-    
-    // 把 1 秒的滑動動畫加回來，準備出發
-    ball.style.transition = 'all 1s linear';
-
     setTimeout(() => {
         // 1. 移動到 Forget Gate
         ball.style.left = '200px';
@@ -155,6 +147,13 @@ function startFlow() {
         ball.style.transform = 'translateX(-50%) scale(1)';
         status.innerText = "處理完成！更新後的 History 繼續傳遞給下一站。";
     }, 6000);
+
+    // 【核心修正】在流程徹底結束後（第 7 秒），球已經暗掉了，直接在後台把它瞬移回起點
+    setTimeout(() => {
+        ball.style.transition = 'none';            // 拔掉動畫
+        ball.style.left = '0px';                    // 瞬間跳回最左邊起點
+        ball.style.transform = 'translateX(-50%) scale(1)'; // 還原大小
+    }, 7000); 
 }
 </script>
 
