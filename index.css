@@ -2,7 +2,7 @@
     border: 0; 
     margin: 0; 
     box-sizing: border-box;
-    font-family: "LXGW WenKai TC", cursive;
+    font-family: "LXGW WenKai TC", sans-serif !important;
 
 html {
     padding: 0; 
