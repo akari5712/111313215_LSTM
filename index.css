@@ -1,3 +1,38 @@
+*{border: 0;
+margin: 0;}
+html{
+    font-family: "LXGW WenKai TC", cursive;
+    margin: 30px;
+    padding: 0;
+    background-color: rgb(251, 255, 255);
+    display: flexbox;
+    border: 0px;
+    color: #ffffff;
+    background-color: rgb(107, 110, 141);
+}
+header{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background-image: url(Gemini_Generated_Image_qpt6rxqpt6rxqpt6.png);
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+    color: #ffffff;
+    font-size: 75px;
+}
+section{
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgb(107, 110, 141);
+}
 .first-list{
     li{
         font-size: 125%;
@@ -7,5 +42,12 @@
 .one{
     ul{
         font-size: 125%;
+    }
+}
+.four{
+    iframe{
+       box-sizing: border-box;
+       background-position: center;
+        padding: auto;
     }
 }
