@@ -106,12 +106,19 @@ function startFlow() {
     const ball = document.getElementById('ball');
     const status = document.getElementById('status');
     
-    // 重置 (中心點在 0 的位置，維持 X 軸中心對齊)
+    // 【核心修正】瞬間跳回最左邊起點：先拔掉動畫，定格到 0px
+    ball.style.transition = 'none'; 
     ball.style.left = '0px';
     ball.style.transform = 'translateX(-50%) scale(1)';
     ball.style.opacity = '1';
     ball.style.boxShadow = '0 0 15px rgba(255,204,0,0.8)';
     
+    // 強制瀏覽器重繪（Reflow），確保「無動畫跳回」立刻生效
+    ball.offsetHeight; 
+    
+    // 把 1 秒的滑動動畫加回來，準備出發
+    ball.style.transition = 'all 1s linear';
+
     setTimeout(() => {
         // 1. 移動到 Forget Gate
         ball.style.left = '200px';
