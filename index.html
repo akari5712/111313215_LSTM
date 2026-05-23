@@ -1,53 +1,94 @@
-*{border: 0;
-margin: 0;}
-html{
-    font-family: "LXGW WenKai TC", cursive;
-    margin: 30px;
-    padding: 0;
-    background-color: rgb(251, 255, 255);
-    display: flexbox;
-    border: 0px;
-    color: #ffffff;
-    background-color: rgb(107, 110, 141);
-}
-header{
-    padding: 0px;
-    margin: 0px;
-    display: flex;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
-    background-image: url(Gemini_Generated_Image_qpt6rxqpt6rxqpt6.png);
-    background-size: cover;
-    background-position: center;
-    /* background-attachment: fixed; */
-    background-repeat: no-repeat;
-    height: 300px;
-    width: 100%;
-    color: #ffffff;
-    font-size: 75px;
-}
-section{
-    margin-top: 30px;
-    margin-left: 10px;
-    margin-right: 10px;
-    background-color: rgb(107, 110, 141);
-}
-.first-list{
-    li{
-        font-size: 125%;
-        /* background-color: aqua; */
-    }
-}
-.one{
-    ul{
-        font-size: 125%;
-    }
-}
-.four{
-    iframe{
-       box-sizing: border-box;
-       background-position: center;
-        padding: auto;
-    }
-}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="LSTM_111313215" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>LSTM_111313215</title>
+</head>
+<body>
+    <header>
+        <h1>LSTM</h1>
+    </header>
+    <section>
+        <div class="first-list">
+            <h2>目錄</h2>
+            <ol class="">
+                <li>演算法介紹</li>
+                <li>AI輔助學習與紀錄</li>
+                <li>查證與修正</li>
+                <li>視覺化說明</li>
+                <li>應用案例</li>
+                <li>學習反思</li>
+            </ol>
+        </div>
+        <hr></hr>
+        <div class="one">
+            <h2>演算法介紹</h2>
+            <h3>LSTM（長短期記憶神經網路，Long Short-Term Memory）</h3>
+            <div class="intro_1">
+                <h4>介紹</h4>
+                <p>LSTM是一種擁有長期記憶的演算法.在處理資料時,能夠找出關鍵的資料並記憶
+                    <br>同時,LSTM也會整理自己的記憶,將不需要的資料遺忘,再將覺得重要的內容存入記憶中,最後才會輸出根據目前資料所得出結論</p>
+            </div>
+            <div class="intro_2">
+                <h4>解決問題</h4>
+                <p>主要解決普通AI在面對文字或時間序列時資訊傳遞會隨著時間衰減,或是因為容量有限,為了存入新記憶而覆蓋舊記憶等原因造成遺忘的現象</p>
+            </div>
+            <div class="intro_3">
+                <h4>運作流程</h4>
+                <p>LSTM擁有一條貫穿貫穿所有場合的「細胞狀態」,可視為一條資料輸送帶,並透過三道閘門來管理資訊</p>
+                <div class="intro_3_1">
+                    <h5>遺忘閘(Forget Gate)</h5>
+                    <p>決定哪些資料不重要,從記憶中刪除</p>
+                </div>
+                <div class="intro_3_1">
+                    <h5>輸入閘(Input Gate)</h5>
+                    <p>決定目前的資訊何者值得存入記憶</p>
+                </div>
+                <div class="intro_3_1">
+                    <h5>輸出閘(Output Gate)</h5>
+                    <p>決定記憶中的哪些內容該取出作為輸出</p>
+                </div>
+            </div>
+            <div class="intro_4">
+                <h4>常見應用:</h4>
+                <p>適合需要注重時間,詞語順序的情況</p>
+                <h5>例如:</h5>
+                <ol>
+                    <ul>Google translate(翻譯)</ul>
+                    <ul>Siri/Alexa:語音辨識以及對話</ul>
+                    <ul>股價預測:分析過去的趨勢來預測明日的走向</ul>
+                </ol>
+            </div>  
+        </div>
+        <div class="two">
+            <h3>對話內容</h3>
+            <img src="螢幕擷取畫面 2026-05-23 011020.png" alt="1">
+            <img src="螢幕擷取畫面 2026-05-23 011456.png" alt="2">
+            <img src="螢幕擷取畫面 2026-05-23 011517.png" alt="3">
+            <img src="螢幕擷取畫面 2026-05-23 214248.png" alt="其他應用">
+            <img src="螢幕擷取畫面 2026-05-23 214320.png" alt="不考慮時間因素">
+            <img src="螢幕擷取畫面 2026-05-23 214458.png" alt="不考慮硬體">
+            <img src="螢幕擷取畫面 2026-05-23 214534.png" alt="全部考慮">
+            <img src="螢幕擷取畫面 2026-05-23 214554.png" alt="為什麼不全換成transfarmer?">
+            <img src="螢幕擷取畫面 2026-05-23 222648.png" alt="股票變化推測問什麼是用LSTM?">
+            <div></div>
+        </div>
+        <div class="four">
+            <h2>視覺化互動</h2>
+            <iframe src=vi.html width=800 height=600 frameborder="0"></iframe>
+
+        </div>
+        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+            <df-messenger
+            intent="WELCOME"
+            chat-title="餐廳"
+            agent-id="e2bb7465-0854-4af0-b980-2ffc9cd9c0b8"
+            language-code="zh-tw"
+            ></df-messenger>
+    </section>
+    
+</body>
+</html>
