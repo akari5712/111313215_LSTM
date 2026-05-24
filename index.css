@@ -13,9 +13,9 @@ html, body {
 }
 
 header {
-    display: flex;
+    /* display: flex;
     /* justify-content: center; */
-    align-items: center;
+    /* align-items: center;
     background-image: url(Gemini_Generated_Image_qpt6rxqpt6rxqpt6.png);
     background-size: cover;
     background-position: center;
@@ -23,10 +23,31 @@ header {
     height: 100px;
     width: 100%;
     color: #ffffff;
-    font-size: 50px;
+    font-size: 50px; */
+    display: flex;
+    justify-content: flex-start; /* 讓內容從左邊開始排 */
+    align-items: flex-end;       /* 關鍵：讓所有文字底部對齊 */
+    background-image: url(Gemini_Generated_Image_qpt6rxqpt6rxqpt6.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100%;
+    color: #ffffff;
+    box-sizing: border-box;       /* 確保 padding 不會撐開整體寬度 */
+    padding: 0 20px 15px 20px;   /* 加上左右內距，以及底部留白 */
 }
-header h3{
-    font-size: 30px;
+header h1 {           /* 假設你的主標題是 h1 或 h2 */
+    font-size: 55px;
+    margin: 0;
+    line-height: 1;
+}
+
+header h3 {
+    font-size: 34px;
+    margin: 0 0 0 15px;          /* 與主標題保持左邊距 15px */
+    line-height: 1;
+    color: #e0e0e0;              /* 稍微降低副標題亮度，增加層次感 */
 }
 
 section {
