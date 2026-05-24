@@ -13,17 +13,6 @@ html, body {
 }
 
 header {
-    /* display: flex;
-    /* justify-content: center; */
-    /* align-items: center;
-    background-image: url(Gemini_Generated_Image_qpt6rxqpt6rxqpt6.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100px;
-    width: 100%;
-    color: #ffffff;
-    font-size: 50px; */
     display: flex;
     justify-content: flex-start; /* 讓內容從左邊開始排 */
     align-items: flex-end;       /* 關鍵：讓所有文字底部對齊 */
