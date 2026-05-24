@@ -25,6 +25,9 @@ header {
     color: #ffffff;
     font-size: 50px;
 }
+header.h3{
+    font-size: 30px;
+}
 
 section {
     margin:0px 10px 10px 0px ;
@@ -47,6 +50,9 @@ img {
     margin-bottom: 15px;
 }
 ol{
+    margin-left: 25px;
+}
+ul{
     margin-left: 25px;
 }
 hr{
